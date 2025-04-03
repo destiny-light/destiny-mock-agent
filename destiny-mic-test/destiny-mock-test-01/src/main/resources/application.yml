@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: destiny-mic-test-01
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver #数据库驱动类
+    type: com.zaxxer.hikari.HikariDataSource #datasource使用的连接池类型
+    url: jdbc:mysql://127.0.0.1:3306/yusp_oca_dev_2_1?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password: root
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml # XML 配置文件路径
+
+server:
+  port: 11001
+
+logging:
+  file:
+    path: D:/logs
+  config: classpath:logback-custom.xml
+  level:
+    root: info

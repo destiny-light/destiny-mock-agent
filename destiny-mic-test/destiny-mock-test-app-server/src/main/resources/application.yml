@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: app-server-crm-simulator
+  profiles:
+    active: dev
+
+server:
+  port: 11201
+
+logging:
+  file:
+    path: D:/logs
+  config: classpath:logback-custom.xml
+  level:
+    root: info

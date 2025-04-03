@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.destiny-light.tools</groupId>
+        <artifactId>destiny-mic</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <artifactId>destiny-mic-test</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        Mock拦截器组件本身的单元测试
+        1.测试Mock拦截器组件-主应用包路径与Mock拦截器相同.
+        2.测试Mock拦截器组件-主应用包路径与Mock拦截器不同.
+        3.测试Mock拦截器组件-不启用Mock拦截器组件.
+    </description>
+
+    <modules>
+        <module>destiny-mock-test-01</module>
+        <module>destiny-mock-test-sdk</module>
+        <module>destiny-mock-test-app-server</module>
+        <module>destiny-mock-test-pojo</module>
+        <module>destiny-mock-test-feigns</module>
+        <module>destiny-mock-test-swagger</module>
+        <module>destiny-mock-test-mock-server-simulator</module>
+    </modules>
+
+</project>

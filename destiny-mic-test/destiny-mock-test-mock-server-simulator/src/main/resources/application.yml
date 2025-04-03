@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: destiny-mic-test-mock-server-simulator
+
+server:
+  port: 11032
+
+logging:
+  file:
+    path: D:/logs
+  config: classpath:logback-custom.xml
+  level:
+    root: info

@@ -1,0 +1,6 @@
+# Mock拦截器组件相关
+yusp:
+  mock:
+    enable: true
+    server: http://192.168.43.1:8081/api/mock
+    # feigns:
