@@ -161,7 +161,7 @@ public class MockTargets {
             mockTargets.setTargets(targets);
         } else {
             log.info("{} 在全局参数配置文件[{}]中的参数[disable]被设置为[true]，不再继续解析Mock数据配置文件",
-                    MockConstants.COMPONENT_NAME, MockConstants.MOCK_SERVER_FILENAME);
+                    MockConstants.COMPONENT_NAME, MockConstants.MOCK_AGENT_CONFIG_FILENAME);
         }
         return mockTargets;
     }

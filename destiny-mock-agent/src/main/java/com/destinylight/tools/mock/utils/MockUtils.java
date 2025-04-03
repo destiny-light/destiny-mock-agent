@@ -70,14 +70,16 @@ public class MockUtils {
      * @return Mock配置文件的根目录
      */
     public static Path configPath() {
-        return Paths.get(System.getProperty("user.dir"), "mock");
+        return isBlank(MockConstants.MIC_HOME) ?
+                Paths.get(System.getProperty("user.dir"), "mock") :
+                Paths.get(MockConstants.MIC_HOME);
     }
 
     /**
      * @return Mock配置文件的根目录是否存在
      */
     public static boolean configPathExist() {
-        File root = Paths.get(System.getProperty("user.dir"), "mock").toFile();
+        File root = configPath().toFile();
         return root.exists() && root.isDirectory();
     }
 
@@ -85,7 +87,7 @@ public class MockUtils {
      * @return Mock服务器的配置文件
      */
     public static File serverConfigFile() {
-        return Paths.get(configPath().toFile().getAbsolutePath(), MockConstants.MOCK_SERVER_FILENAME).toFile();
+        return Paths.get(configPath().toFile().getAbsolutePath(), MockConstants.MOCK_AGENT_CONFIG_FILENAME).toFile();
     }
 
     /**

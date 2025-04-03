@@ -65,7 +65,7 @@ public class MockPremain {
             log.info("{} 没有需要拦截的目标，禁用Mock拦截器", MockConstants.COMPONENT_NAME);
         } else if (targets.getConfig().isDisable()) {
             log.info("{} 在全局参数配置文件[{}]中的参数[disable]被设置为[true]，禁用Mock拦截器",
-                    MockConstants.COMPONENT_NAME, MockConstants.MOCK_SERVER_FILENAME);
+                    MockConstants.COMPONENT_NAME, MockConstants.MOCK_AGENT_CONFIG_FILENAME);
         } else {
             log.info("{} 因为未知的原因，禁用Mock拦截器", MockConstants.COMPONENT_NAME);
         }

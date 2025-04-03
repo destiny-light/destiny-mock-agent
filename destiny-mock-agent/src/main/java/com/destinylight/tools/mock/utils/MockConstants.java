@@ -16,13 +16,17 @@ public class MockConstants {
      */
     public static boolean DEBUG = false;
     /**
+     * Mock拦截器组件配置文件主目录
+     */
+    public static String MIC_HOME = null;
+    /**
      * Mock数据配置文件名称的后缀
      */
     public static final String MOCK_DATA_FILENAME_SUFFIX = ".mock.json";
     /**
-     * Mock服务器配置文件名称
+     * Mock拦截器组件配置文件名称
      */
-    public static final String MOCK_SERVER_FILENAME = "mock-server.json";
+    public static final String MOCK_AGENT_CONFIG_FILENAME = "mock-agent-config.json";
     /**
      * 组件名称
      */
@@ -66,5 +70,9 @@ public class MockConstants {
 
     public static void setDebug(boolean debug) {
         MockConstants.DEBUG = debug;
+    }
+
+    public static void setMicHome(String micHome) {
+        MIC_HOME = micHome;
     }
 }

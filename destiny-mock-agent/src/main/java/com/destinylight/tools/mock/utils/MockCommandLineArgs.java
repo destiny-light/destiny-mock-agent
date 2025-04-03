@@ -29,10 +29,15 @@ public class MockCommandLineArgs {
             try {
                 String[] options = arg.split("=");
                 String name = options[0];
-                if ("debug".equals(name)) {
+                if ("debug".equalsIgnoreCase(name)) {
                     // 是否输出Mock拦截器组件的调试信息
                     log.info("{} 设置为调试模式", MockConstants.COMPONENT_NAME);
                     MockConstants.setDebug(true);
+                } else if ("MIC_HOME".equalsIgnoreCase(name)) {
+                    // 指定Mock拦截器组件配置文件主目录名，替代默认目录名
+                    String value = options[1];
+                    log.info("{} 设置配置文件主目录为[{}]", MockConstants.COMPONENT_NAME, value);
+                    MockConstants.setMicHome(value);
                 }
             } catch (Exception e) {
                 log.error("{} 解析参数[{}]失败[{}]", MockConstants.COMPONENT_NAME, arg, e.getMessage(), e);
