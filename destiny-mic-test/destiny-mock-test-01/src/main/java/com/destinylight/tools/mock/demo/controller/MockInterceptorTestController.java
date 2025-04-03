@@ -4,7 +4,6 @@ import com.destinylight.tools.mock.demo.service.CorpService;
 import com.destinylight.tools.mock.demo.service.PersonService;
 import com.destinylight.tools.mock.demo.service.SomeMethodProxy;
 import com.destinylight.tools.mock.demo.service.SomethingForProxy;
-import com.dahuyou.change.method.param.ServerConnector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,8 +41,6 @@ public class MockInterceptorTestController {
         log.info("测试【个人信息服务】");
         personService.personInfoTest();
         log.info("测试【个人信息服务】完成");
-        ServerConnector serverConnector = new ServerConnector();
-        serverConnector.newSelectorManager(null, null, 9);
         String a = new PersonService().abc(1, 2, 1388, "3S");
         log.info("from abc(): {}", a);
     }
